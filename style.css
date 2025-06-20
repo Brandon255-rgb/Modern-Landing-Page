@@ -139,6 +139,9 @@ nav .logo p span {
 .body-container .text h1 {
 	font-size: 3.7rem;
 	color: rgb(233, 233, 233);
+	transform: translateX(-100%);
+	opacity: 0;
+	animation: slideIn2 1.2s ease-in forwards;
 }
 
 .body-container .text span {
@@ -149,8 +152,12 @@ nav .logo p span {
 }
 
 .body-container .text p {
-	font-size: 2.2rem;
+	font-size: 2.3rem;
+	font-weight: 700;
 	color: rgb(222, 222, 222);
+	transform: translateX(-100%);
+	animation: slideIn3 3.7s cubic-bezier(0.5, 1.5, 0.5, 1) forwards;
+	animation-delay: 1.5s;
 }
 
 .body-container .profile-picture {
@@ -167,9 +174,59 @@ nav .logo p span {
 	border-radius: 50%;
 	overflow: hidden;
 	height: 20rem;
+	transform: translateX(200%);
+	opacity: 0;
+	animation: slideIn 1.5s ease-out forwards;
 }
 .body-container .profile-picture img {
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+
+@keyframes slideIn {
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+@keyframes slideIn2 {
+	to {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn3 {
+	0% {
+		transform: translateX(-60%) scaleX(1) scaleY(1);
+		opacity: 0;
+	}
+	13% {
+		transform: translateX(16%) scaleX(0.75) scaleY(1.25);
+		opacity: 0.7;
+	}
+	22% {
+		transform: translateX(-7%) scaleX(1.07) scaleY(0.9);
+	}
+	30% {
+		transform: translateX(12%) scaleX(0.85) scaleY(1.15);
+		opacity: 1;
+	}
+	40% {
+		transform: translateX(-4%) scaleX(1.05) scaleY(0.95);
+	}
+	49% {
+		transform: translateX(7%) scaleX(0.9) scaleY(1.1);
+	}
+	59% {
+		transform: translateX(-2%) scaleX(1.07) scaleY(0.99);
+	}
+	72% {
+		transform: translateX(5%) scaleX(0.85) scaleY(1.17);
+	}
+	100% {
+		transform: translateX(0%) scaleX(1) scaleY(1);
+		opacity: 1;
+	}
 }
