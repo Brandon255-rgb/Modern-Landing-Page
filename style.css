@@ -85,14 +85,15 @@ nav .logo p span {
 	text-decoration: none;
 	color: #fff;
 	font-weight: 700;
-	font-size: 1.2rem;
+	font-size: 1.3rem;
 	transition: all ease 0.4s;
 	display: inline-block;
 }
 
 .navbar-container .navbar-list li a:hover {
 	color: purple;
-	transform: scale(1.1);
+	transform: scale(1.2);
+	-webkit-text-stroke: 0.3px rgb(255, 255, 255);
 }
 
 .navbar-container .navbar-list li::after {
@@ -108,7 +109,8 @@ nav .logo p span {
 }
 .navbar-container .navbar-list li:hover::after {
 	width: 100%;
-	transform: scale(1.1);
+	transform: scale(1.2);
+	border: 0.3px solid #fff;
 }
 .navbar-container .navbar-list li#active::after {
 	width: 100%;
